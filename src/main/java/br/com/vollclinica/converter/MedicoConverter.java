@@ -10,6 +10,7 @@ public class MedicoConverter {
                 .crm(medicoRequest.crm())
                 .email(medicoRequest.email())
                 .nome(medicoRequest.nome())
+                .telefone(medicoRequest.telefone())
                 .especialidade(medicoRequest.especialidade())
                 .endereco(EnderecoConverter.toEndereco(medicoRequest.endereco()))
                 .build();
