@@ -10,7 +10,6 @@ import br.com.vollclinica.repository.MedicoRepository;
 import br.com.vollclinica.service.MedicoService;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

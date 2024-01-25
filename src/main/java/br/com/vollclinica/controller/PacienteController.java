@@ -14,7 +14,7 @@ public class PacienteController {
 
     private final PacienteService pacienteService;
 
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public void cadastrarPaciente(@RequestBody PacienteRequest pacienteRequest){
          pacienteService.cadastrarPaciente(pacienteRequest);

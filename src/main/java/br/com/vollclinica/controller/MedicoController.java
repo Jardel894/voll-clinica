@@ -19,22 +19,25 @@ public class MedicoController {
 
     private final MedicoService medicoService;
 
-    @ResponseStatus(HttpStatus.ACCEPTED)
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
     public void cadastrarMedico(@RequestBody @Valid MedicoRequest medicoRequest){
         medicoService.cadastrarMedico(medicoRequest);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping
     Page<MedicoResponse> listarMedicos(@PageableDefault(size = 5, sort = {"nome"}) Pageable pageable){
         return medicoService.listarMedicos(pageable);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @PutMapping("{id}")
     public void atulizarDadosMedico(@RequestBody MedicoUpdateRequest medicoUpdateRequest, @PathVariable Long id){
         medicoService.atualizarDadosMedico(medicoUpdateRequest, id);
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @DeleteMapping("{id}")
     public void deletarMedico(@PathVariable Long id){
         medicoService.deletarMedico(id);
