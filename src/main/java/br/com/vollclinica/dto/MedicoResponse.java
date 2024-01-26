@@ -5,6 +5,8 @@ import lombok.Builder;
 
 @Builder
 public record MedicoResponse(
+
+        Long id,
          String nome,
          String email,
          String crm,

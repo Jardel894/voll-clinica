@@ -19,6 +19,7 @@ public class MedicoConverter {
 
     public static MedicoResponse toMedicoResponse(Medico medico){
         return MedicoResponse.builder()
+                .id(medico.getId())
                 .crm(medico.getCrm())
                 .email(medico.getEmail())
                 .nome(medico.getNome())

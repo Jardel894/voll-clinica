@@ -27,7 +27,7 @@ public class MedicoController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping
-    Page<MedicoResponse> listarMedicos(@PageableDefault(size = 5, sort = {"nome"}) Pageable pageable){
+    Page<MedicoResponse> listarMedicos(@PageableDefault(size = 5, sort = {"id"}) Pageable pageable){
         return medicoService.listarMedicos(pageable);
     }
 
