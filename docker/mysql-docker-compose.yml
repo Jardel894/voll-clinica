@@ -6,7 +6,6 @@ services:
       - dbdata:/var/lib/mysql
     networks:
       - clientes-compose-network
-    restart: always
     ports:
       - "3307:3306"
     environment:
