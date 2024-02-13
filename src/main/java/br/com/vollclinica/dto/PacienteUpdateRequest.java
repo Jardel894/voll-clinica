@@ -1,8 +1,14 @@
 package br.com.vollclinica.dto;
 
-public record MedicoUpdateRequest(
+import lombok.Builder;
+
+@Builder
+public record PacienteUpdateRequest(
         String nome,
+
         String email,
+
         String telefone,
+
         EnderecoDto endereco) {
 }

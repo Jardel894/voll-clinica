@@ -6,5 +6,5 @@ public record PacienteRequest (
          String email,
          String cpf,
          String telefone,
-         EnderecoRequest endereco) {
+         EnderecoDto endereco) {
 }

@@ -21,5 +21,5 @@ public record MedicoRequest (
         @NotNull
         Especialidade especialidade,
         @Valid
-        EnderecoRequest endereco) {
+        EnderecoDto endereco) {
 }

@@ -2,8 +2,10 @@ package br.com.vollclinica.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.Builder;
 
-public record EnderecoRequest(
+@Builder
+public record EnderecoDto(
         @NotBlank
         String logradouro,
         @NotBlank

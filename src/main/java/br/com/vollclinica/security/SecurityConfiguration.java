@@ -28,8 +28,9 @@ public class SecurityConfiguration {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
                     req.requestMatchers(HttpMethod.POST, "/login").permitAll();
-                    req.requestMatchers(HttpMethod.DELETE, "/login").hasRole("ADMIN");
-                    req.requestMatchers(HttpMethod.PUT, "/login").hasRole("ADMIN");
+                    req.requestMatchers(HttpMethod.DELETE, "/login");
+                    req.requestMatchers(HttpMethod.PUT, "/login");
+                    req.requestMatchers(HttpMethod.POST, "/v1/consulta");
                     req.anyRequest().authenticated();
                 })
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
