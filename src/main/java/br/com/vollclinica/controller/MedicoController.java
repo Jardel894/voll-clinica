@@ -4,6 +4,7 @@ import br.com.vollclinica.dto.MedicoRequest;
 import br.com.vollclinica.dto.MedicoResponse;
 import br.com.vollclinica.dto.MedicoUpdateRequest;
 import br.com.vollclinica.service.MedicoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RequestMapping("v1/medicos")
+@SecurityRequirement(name = "bearer-key")
 @RestController
 public class MedicoController {
 

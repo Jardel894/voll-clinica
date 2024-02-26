@@ -12,7 +12,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
+import java.net.http.HttpResponse;
 
 @Service
 @RequiredArgsConstructor
@@ -41,6 +41,6 @@ public class ConsultaServiceImpl implements ConsultaService {
         if (consultaRequest.especialidade() == null){
             throw new RuntimeException("Especialidade é obrigatŕio quando médico não for escolhido");
         }
-        return medicoRepository.findByEspecialidade(consultaRequest.especialidade()).get(0);
+        return medicoRepository.findByEspecialidade(consultaRequest.especialidade()).getFirst();
     }
 }

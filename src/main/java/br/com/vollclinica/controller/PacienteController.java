@@ -5,6 +5,7 @@ import br.com.vollclinica.dto.PacienteRequest;
 import br.com.vollclinica.dto.PacienteResponse;
 import br.com.vollclinica.dto.PacienteUpdateRequest;
 import br.com.vollclinica.service.PacienteService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RequestMapping("v1/pacientes")
+@SecurityRequirement(name = "bearer-key")
 @RestController
 public class PacienteController {
 
